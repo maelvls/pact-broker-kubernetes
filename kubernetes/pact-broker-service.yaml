@@ -3,15 +3,15 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: pact-broker
-  name: pact-broker
+    io.kompose.service: pact-the-broker
+  name: pact-the-broker
   namespace: pact
 spec:
   ports:
     - name: http
-      port: 9292
-      targetPort: 80
+      port: 80
+      targetPort: 9292
       nodePort: 32033
   selector:
-    io.kompose.service: pact-broker
+    io.kompose.service: pact-the-broker
   type: LoadBalancer
